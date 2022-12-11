@@ -1,0 +1,72 @@
+/* NAVBAR */
+.nav_bar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 6em;
+  width: 100%;
+}
+
+/* SEARCH */
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.7px solid gray;
+  margin-right: 1em;
+  margin-left: 3em;
+  height: 2em;
+  border-radius: 15px;
+  width: 15em;
+}
+
+.search_bar {
+  border: none;
+  background: transparent;
+  margin: 0;
+  border: 1px solid transparent;
+  margin-right: 6em;
+}
+
+.search_icon {
+
+}
+
+
+/* LEFT NAV */
+.left_nav {
+  display: flex;
+  margin-left: 43em;
+  width: 100%;
+}
+
+/* ACCOUNT */
+.nav_account {
+  padding-right: 1em;
+  font-weight: 200;
+}
+
+.account_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account_icon {
+  margin-right: 0.5em;
+}
+
+
+/* CART */
+.nav_cart {
+  font-weight: 200;
+}
+
+.cart_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart_icon {
+  margin-right: 0.5em;
+}
