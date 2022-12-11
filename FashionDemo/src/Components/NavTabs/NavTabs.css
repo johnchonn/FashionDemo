@@ -1,0 +1,66 @@
+/* TABS */
+.tabs_container {
+  width: 105%;
+  margin-left: -1em;
+  box-shadow: 0px 15px 10px -20px gray;
+}
+
+/* SHOP ALL */
+.shop_all {
+  /* border: 1px solid black; */
+}
+
+.shop_all:hover {
+  cursor: pointer;
+  border-bottom: 1.2px solid black;
+}
+
+/* NEW ARRIVALS */
+.new_arrivals {
+
+}
+
+.new_arrivals:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid black;
+}
+
+/* ACCESSORIES */
+.accessories {
+
+}
+
+.accessories:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid black;
+}
+
+/* MEN */
+.men {
+
+}
+
+.men:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid black;
+}
+
+/* WOMEN */
+.women {
+
+}
+
+.women:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid black;
+}
+
+/* SALE */
+.sale {
+
+}
+
+.sale:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid black;
+}

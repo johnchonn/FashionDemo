@@ -2,8 +2,10 @@
 .nav_bar {
   display: flex;
   align-items: center;
-  padding-bottom: 6em;
-  width: 100%;
+  padding-bottom: 1em;
+  width: 105%;
+  border-bottom: 1px solid #ccc;
+  margin-left: -1em;
 }
 
 /* SEARCH */
@@ -11,32 +13,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.7px solid gray;
+  border: 0.7px solid #ccc;
   margin-right: 1em;
   margin-left: 3em;
-  height: 2em;
+  height: 1.6em;
   border-radius: 15px;
-  width: 15em;
+  width: 17em;
 }
 
 .search_bar {
   border: none;
   background: transparent;
   margin: 0;
-  border: 1px solid transparent;
-  margin-right: 6em;
+  margin-left: 0.5em;
+  font-size: 12.5px;
+  width: 100%;
 }
 
 .search_icon {
+  margin-right: 0.5em;
+}
 
+.search_icon:hover {
+  cursor: pointer;
+}
+
+/* LOGO */
+.logo {
+  margin-left: 2em;
+  height: 75px;
 }
 
 
 /* LEFT NAV */
 .left_nav {
   display: flex;
-  margin-left: 43em;
-  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 18em;
+  width: 30%;
 }
 
 /* ACCOUNT */
@@ -51,8 +66,21 @@
   align-items: center;
 }
 
+.account_container:hover {
+  cursor: pointer;
+}
+
 .account_icon {
   margin-right: 0.5em;
+}
+
+/* FAVORITES */
+.favorites_icon {
+  margin-right: 1em;
+}
+
+.favorites_icon:hover {
+  cursor: pointer;
 }
 
 
@@ -65,6 +93,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cart_container:hover {
+  cursor: pointer;
 }
 
 .cart_icon {
