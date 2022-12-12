@@ -14,7 +14,7 @@
 
 .new_arrivals:hover {
   cursor: pointer;
-  border-bottom: 1.2px solid black;
+  border-bottom: 1.2px solid #595959;
 }
 
 /* ACCESSORIES */
@@ -24,7 +24,7 @@
 
 .accessories:hover {
   cursor: pointer;
-  border-bottom: 1.2px solid black;
+  border-bottom: 1.2px solid #595959;
 }
 
 /* MEN */
@@ -34,7 +34,7 @@
 
 .men:hover {
   cursor: pointer;
-  border-bottom: 1.2px solid black;
+  border-bottom: 1.2px solid #595959;
 }
 
 /* WOMEN */
@@ -44,7 +44,7 @@
 
 .women:hover {
   cursor: pointer;
-  border-bottom: 1.2px solid black;
+  border-bottom: 1.2px solid #595959;
 }
 
 /* BEAUTY */
@@ -65,5 +65,5 @@
 
 .sale:hover {
   cursor: pointer;
-  border-bottom: 1.2px solid black;
+  border-bottom: 1.2px solid #595959;
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil"
 import {
         newArrivals_is_active,
@@ -49,7 +49,7 @@ function NavTabs() {
   return (
     <div>
       <Tabs className="tabs_container" centered>
-        <Tab onMouseEnter={() => setNewArrivalsHover(!newArrivalsHover)} onMouseLeave={() => setNewArrivalsHover(!newArrivalsHover)} sx={{ fontSize: 14 }} label="NEW ARRIVALS" className="new_arrivals" />
+        <Tab onMouseEnter={() => setNewArrivalsHover(!newArrivalsHover)} sx={{ fontSize: 14 }} label="NEW ARRIVALS" className="new_arrivals" />
         <Tab onMouseEnter={() => setMensHover(!mensHover)} onMouseLeave={() => setMensHover(!mensHover)} sx={{ fontSize: 14 }} label="MEN" className="men" />
         <Tab onMouseEnter={() => setWomenHover(!womenHover)} onMouseLeave={() => setWomenHover(!womenHover)} sx={{ fontSize: 14 }} label="WOMEN" className="women" />
         <Tab onMouseEnter={() => setAccessoriesHover(!accessoriesHover)} onMouseLeave={() => setAccessoriesHover(!accessoriesHover)} sx={{ fontSize: 14 }} label="ACCESSORIES" className="accessories" />
@@ -59,14 +59,14 @@ function NavTabs() {
       <div>
       {
         isNewArrivalsHover ?
-        <NewArrivals /> :
+        <div onMouseLeave={() => setNewArrivalsHover(!newArrivalsHover)}><NewArrivals /></div> :
         null
       }
       </div>
       <div>
       {
         isMensHover ?
-        <Mens /> :
+        <div><Mens /></div> :
         null
       }
       </div>

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil"
+import { newArrivals_is_active } from "../../state/atoms"
 import './NavBar.css'
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -10,8 +12,10 @@ import '@fontsource/roboto/300.css';
 import logo from '../../../public/logoDesign.jpg'
 
 function NavBar() {
+  const [arrivalsHover, setArrivalsHover] = useRecoilState(newArrivals_is_active);
+  const isArrivals = useRecoilValue(newArrivals_is_active);
   return (
-    <div>
+    <div onMouseEnter={() => setArrivalsHover(false)}>
       <nav className="nav_bar">
         <img src={logo} atl="Logo" className="logo" />
         <form className="search_container">
