@@ -1,15 +1,14 @@
 /* TABS */
 .tabs_container {
-  width: 105%;
+  width: 100%;
   margin-top: -1em;
-  margin-left: -1em;
   box-shadow: 0px 15px 10px -20px gray;
 }
 
 
 /* NEW ARRIVALS */
 .new_arrivals {
-
+  
 }
 
 .new_arrivals:hover {

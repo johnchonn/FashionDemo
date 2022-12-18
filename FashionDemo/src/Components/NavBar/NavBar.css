@@ -3,9 +3,8 @@
   display: flex;
   align-items: center;
   padding-bottom: 2em;
-  width: 105%;
+  width: 100%;
   border-bottom: 0.8px solid #ccc;
-  margin-left: -1em;
 }
 
 /* SEARCH */

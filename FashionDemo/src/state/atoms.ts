@@ -2,6 +2,15 @@ import { atom } from 'recoil'
 import { newArrivalsData, menData, womenData, accessoriesData, beautyData, salesData } from './dummyData'
 
 
+// —————————————————————————————————————————————————————————————————————————————
+// Shareable Boolean Flag
+
+export const shareable_is_active = atom({
+  key: "shareable_state",
+  default: false,
+})
+
+
 
 // —————————————————————————————————————————————————————————————————————————————
 // New Arrivals
@@ -82,3 +91,11 @@ export const sales_Data = atom({
   key: "salesData_state",
   default: salesData
 })
+
+// —————————————————————————————————————————————————————————————————————————————
+// Carousel
+
+// export const carousel_Data = atom({
+//   key: "carouselData_state",
+//   default: carouselData
+// })

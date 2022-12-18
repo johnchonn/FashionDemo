@@ -6,11 +6,12 @@ import {
         women_is_active,
         accessories_is_active,
         beauty_is_active,
-        sales_is_active
+        sales_is_active,
+        shareable_is_active
       } from "../../state/atoms"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/400.css';
 import './NavTabs.css'
 import NewArrivals from '../NewArrivals/NewArrivals'
 import Mens from '../Mens/Mens'
@@ -20,6 +21,10 @@ import Beauty from '../Beauty/Beauty'
 import Sale from '../Sale/Sale'
 
 function NavTabs() {
+
+  // SHAREABLE
+  const [shareableHover, setShareableHover] = useRecoilState(shareable_is_active);
+  const isShareable = useRecoilValue(shareable_is_active);
 
   // NEW ARRIVALS
   const [newArrivalsHover, setNewArrivalsHover] = useRecoilState(newArrivals_is_active);
@@ -45,56 +50,90 @@ function NavTabs() {
   const [saleHover, setSaleHover] = useRecoilState(sales_is_active);
   const isSaleHover = useRecoilValue(sales_is_active);
 
+  function closeArrivals() {
+    setMensHover(true);
+    setNewArrivalsHover(false);
+    setWomenHover(false);
+  }
+
+  function closeMens() {
+    setNewArrivalsHover(true);
+    setMensHover(false);
+  }
+
+  function closeWomen() {
+    setWomenHover(true);
+    setMensHover(false);
+    setAccessoriesHover(false);
+  }
+
+  function closeAccessories() {
+    setAccessoriesHover(true);
+    setWomenHover(false);
+    setBeautyHover(false);
+  }
+
+  function closeBeauty() {
+    setBeautyHover(true);
+    setAccessoriesHover(false);
+    setSaleHover(false);
+  }
+
+  function closeSales() {
+    setSaleHover(true);
+    setBeautyHover(false);
+  }
+
 
   return (
     <div>
       <Tabs className="tabs_container" centered>
-        <Tab onMouseEnter={() => setNewArrivalsHover(!newArrivalsHover)} sx={{ fontSize: 14 }} label="NEW ARRIVALS" className="new_arrivals" />
-        <Tab onMouseEnter={() => setMensHover(!mensHover)} onMouseLeave={() => setMensHover(!mensHover)} sx={{ fontSize: 14 }} label="MEN" className="men" />
-        <Tab onMouseEnter={() => setWomenHover(!womenHover)} onMouseLeave={() => setWomenHover(!womenHover)} sx={{ fontSize: 14 }} label="WOMEN" className="women" />
-        <Tab onMouseEnter={() => setAccessoriesHover(!accessoriesHover)} onMouseLeave={() => setAccessoriesHover(!accessoriesHover)} sx={{ fontSize: 14 }} label="ACCESSORIES" className="accessories" />
-        <Tab onMouseEnter={() => setBeautyHover(!beautyHover)} onMouseLeave={() => setBeautyHover(!beautyHover)} sx={{ fontSize: 14 }} label="BEAUTY" className="beauty" />
-        <Tab onMouseEnter={() => setSaleHover(!saleHover)} onMouseLeave={() => setSaleHover(!saleHover)} sx={{ fontSize: 14 }} label="SALE" className="sale" />
+        <Tab onMouseEnter={closeMens} onMouseLeave={() => setNewArrivalsHover(false)} sx={{ fontSize: 14}} label="NEW ARRIVALS" className="new_arrivals" />
+        <Tab onMouseEnter={closeArrivals} sx={{ fontSize: 14 }} label="MEN" className="men" />
+        <Tab onMouseEnter={closeWomen} sx={{ fontSize: 14 }} label="WOMEN" className="women" />
+        <Tab onMouseEnter={closeAccessories} sx={{ fontSize: 14 }} label="ACCESSORIES" className="accessories" />
+        <Tab onMouseEnter={closeBeauty} sx={{ fontSize: 14 }} label="BEAUTY" className="beauty" />
+        <Tab onMouseEnter={closeSales} onMouseLeave={() => setSaleHover(false)} sx={{ fontSize: 14 }} label="SALE" className="sale" />
       </Tabs>
       <div>
       {
         isNewArrivalsHover ?
-        <div onMouseLeave={() => setNewArrivalsHover(!newArrivalsHover)}><NewArrivals /></div> :
+        <div onMouseEnter={() => setNewArrivalsHover(true)} onMouseLeave={() => setNewArrivalsHover(!newArrivalsHover)}><NewArrivals /></div> :
         null
       }
       </div>
       <div>
       {
         isMensHover ?
-        <div><Mens /></div> :
+        <div onMouseLeave={() => setMensHover(!mensHover)}><Mens /></div> :
         null
       }
       </div>
       <div>
         {
           isWomenHover ?
-          <Women /> :
+          <div onMouseLeave={() => setWomenHover(!womenHover)}><Women /></div> :
           null
         }
       </div>
       <div>
         {
           isAccessoriesHover ?
-          <Accessories /> :
+          <div onMouseLeave={() => setAccessoriesHover(!accessoriesHover)}><Accessories /></div> :
           null
         }
       </div>
       <div>
         {
           isBeautyHover ?
-          <Beauty /> :
+          <div onMouseLeave={() => setBeautyHover(!beautyHover)}><Beauty /></div> :
           null
         }
       </div>
       <div>
         {
           isSaleHover ?
-          <Sale /> :
+          <div onMouseEnter={() => setSaleHover(true)} onMouseLeave={() => setSaleHover(!saleHover)}><Sale /></div> :
           null
         }
       </div>

@@ -1,3 +1,4 @@
+
 export const newArrivalsData = [
   {
     date: 'November 2022',
@@ -54,3 +55,26 @@ export const salesData = [
   'Sales Pants/Jeans',
   'Sales Earrings'
 ]
+
+// export const carouselData = [
+//   {
+//     title: "JOGUN",
+//     subText: "Winter Classics 2022"
+//   },
+//   {
+//     title: "MMLG",
+//     subText: "My Everyday Wear"
+//   },
+//   {
+//     title: "YOUTH",
+//     subText: "Still Life"
+//   },
+//   {
+//     title: "MONCLOS",
+//     subText: "Simple Hair Care"
+//   },
+//   {
+//     title: "DUNST",
+//     subText: "A Day Of Us"
+//   },
+// ]

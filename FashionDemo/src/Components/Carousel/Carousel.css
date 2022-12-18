@@ -1,0 +1,29 @@
+
+.carousel_container {
+  width: 70%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.carousel_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.carousel_item:hover {
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: 0.1em;
+  /* color: black; */
+  /* background-color: white; */
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 0.1em;
+}
