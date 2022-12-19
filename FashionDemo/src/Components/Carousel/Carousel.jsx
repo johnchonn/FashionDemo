@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil"
-// import Carousel from 'react-material-ui-carousel'
 import dunst from '../../../public/dunst.jpg'
 import jogun from '../../../public/jogun.jpg'
 import mmlg from '../../../public/mmlg.jpg'
@@ -45,33 +44,6 @@ export const carouselData = [
   },
 ]
 
-// const settings = {
-//   navButtonsAlwaysVisible: true,
-//   animation: "slide",
-//   duration: 700,
-//   interval: 3000,
-
-// }
-
-// function LiveCarousel() {
-//   return (
-//     <Carousel {...settings} sx={{width: '80%', mt: 10, marginLeft: "auto", marginRight: "auto"}}>
-//       {carouselData.map((item, index) => (
-//         <div className="carousel_item" key={index}>
-//           <img src={item.img} atl="dunst" className="carousel_image" style={{height: 385, width: 305}}/>
-//           <div
-//           className="carousel_title"
-//           style={{color: 'white', fontFamily: 'Roboto', position: 'absolute', bottom: 75, fontSize: 22, marginLeft: 20}}
-//           >
-//           {item.title}
-//           </div>
-//           <div className="carousel_subText" style={{color: 'white', fontFamily: 'Roboto', position: 'absolute', bottom: 50, fontSize: 18, marginLeft: 20}}>{item.subText}</div>
-//         </div>
-//       ))}
-//       </Carousel>
-//   )
-// }
-
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -107,12 +79,12 @@ const settings = {
 
 function LiveCarousel() {
   return (
-    <div>
-      <h4 style={{fontFamily: 'Roboto', fontSize: 25, textAlign: 'center', marginTop: 80, fontWeight: 300}}>FEATURED BRANDS</h4>
+    <div className="outer_container">
+      <h4 style={{fontFamily: 'Roboto', fontSize: 25, textAlign: 'center', marginTop: 80, fontWeight: 300, position: 'relative', zIndex: 0}}>FEATURED BRANDS</h4>
     <Carousel responsive={responsive} {...settings}>
       {carouselData.map((item, index) => (
         <div className="carousel_item" key={index}>
-          <img src={item.img} atl="dunst" className="carousel_image" style={{height: 385, width: 305}}/>
+          <img src={item.img} atl="dunst" className="carousel_image" style={{height: 385, width: 305, position: 'relative', zIndex: 0}}/>
           <div
           className="carousel_title"
           style={{color: 'white', fontFamily: 'Roboto', position: 'absolute', bottom: 75, fontSize: 22, marginLeft: 20}}

@@ -4,8 +4,9 @@ import './App.css'
 import Navbar from './Components/NavBar/NavBar'
 import NavTabs from './Components/NavTabs/NavTabs'
 import LiveCarousel from './Components/Carousel/Carousel'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import DecemberDisplay from './Components/December/December'
+import NovemberDisplay from './Components/November/November'
+import NewIn from './Components/NewIn/NewIn'
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
         <h3><Navbar /></h3>
         <NavTabs />
         <LiveCarousel />
+        <NewIn />
+        <DecemberDisplay />
+        <NovemberDisplay />
       </div>
     </RecoilRoot>
   )

@@ -1,22 +1,20 @@
 
-.outer_container {
-  position: relative;
-  z-index: 0;
+.new_in_container {
+  /* border: 1px solid blue; */
 }
 
 
-.carousel_container {
-  position: relative;
-  z-index: 0;
-  width: 69%;
+.newIn_container {
+  /* border: 1px solid red; */
+  width: 74%;
   height: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 5em;
+  padding-bottom: 8em;
 }
 
-.carousel_item {
-  position: relative;
-  z-index: 0;
+.newIn_item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +22,7 @@
   width: fit-content;
 }
 
-.carousel_item:hover {
+.newIn_item:hover {
   cursor: pointer;
 }
 
@@ -34,4 +32,15 @@
 
 .react-multiple-carousel__arrow--right {
   right: 0.1em;
+}
+
+.newIn_info {
+}
+
+.explore {
+  border-bottom: 0.8px solid #595959;
+}
+
+.explore:hover {
+  cursor: pointer;
 }
