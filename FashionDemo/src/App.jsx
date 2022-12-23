@@ -5,8 +5,8 @@ import Navbar from './Components/NavBar/NavBar'
 import NavTabs from './Components/NavTabs/NavTabs'
 import LiveCarousel from './Components/Carousel/Carousel'
 import DecemberDisplay from './Components/December/December'
-import NovemberDisplay from './Components/November/November'
 import NewIn from './Components/NewIn/NewIn'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         <LiveCarousel />
         <NewIn />
         <DecemberDisplay />
-        <NovemberDisplay />
+        <Footer />
       </div>
     </RecoilRoot>
   )

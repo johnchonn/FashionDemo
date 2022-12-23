@@ -101,6 +101,7 @@ function NewIn() {
   return (
     <div className="new_in_container">
       <h4 style={{fontFamily: 'Roboto', fontSize: 25, textAlign: 'center', marginTop: 80, fontWeight: 300, position: 'relative', zIndex: 0}}>NEW IN</h4>
+      <span className="explore" style={{fontFamily: 'Roboto', fontSize: 12, fontWeight: 400, position: 'relative', left: 1150, bottom: 20}}>Explore More</span>
       <Carousel responsive={responsive} {...settings}>
         {carouselData.map((item, index) => (
           <div className="newIn_item" key={index}>
@@ -111,7 +112,6 @@ function NewIn() {
           </div>
         ))}
       </Carousel>
-      <span className="explore" style={{fontFamily: 'Roboto', fontSize: 12, fontWeight: 400, position: 'relative', left: 1150, bottom: 100}}>Explore More ></span>
     </div>
   )
 }

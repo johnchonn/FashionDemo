@@ -47,6 +47,7 @@ function NavBar() {
     setSalesHover(false);
   }
 
+
   return (
     <div onMouseEnter={closeNavTabs}
     >

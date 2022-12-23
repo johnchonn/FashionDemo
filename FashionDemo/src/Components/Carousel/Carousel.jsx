@@ -84,7 +84,7 @@ function LiveCarousel() {
     <Carousel responsive={responsive} {...settings}>
       {carouselData.map((item, index) => (
         <div className="carousel_item" key={index}>
-          <img src={item.img} atl="dunst" className="carousel_image" style={{height: 385, width: 305, position: 'relative', zIndex: 0}}/>
+          <img src={item.img} atl="img" className="carousel_image" style={{height: 385, width: 305, position: 'relative', zIndex: 0}}/>
           <div
           className="carousel_title"
           style={{color: 'white', fontFamily: 'Roboto', position: 'absolute', bottom: 75, fontSize: 22, marginLeft: 20}}
